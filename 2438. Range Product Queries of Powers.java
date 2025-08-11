@@ -63,3 +63,18 @@ class Solution {
         return ans;
     }
 }
+
+
+/*
+Approach :- 
+1. Extract powers of 2 from n
+----soppose n=38 = 100110(in binary)
+    least no of powers of 2 from 38 whose sum is 38 = 2, 4, 32
+    How we get it?
+    in binary at which place there is one.
+    Idea:- left shift the binary of n and find bitwise and with 1(decimal) to get that at which place there is one
+    Suppose we get out 1 at ith iteration then find 2**i which is the power of 2 going to add in powers array.
+
+2. for each queries entry we find the product of entries of power according to given indexes and store it in answer array.
+   finally return answer array.
+*/
